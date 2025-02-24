@@ -1,4 +1,3 @@
-import { orderModel } from "../models/order.js";
 import { userModel } from "../models/user.js";
 import bcrypt from "bcrypt";
 

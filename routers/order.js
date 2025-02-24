@@ -1,14 +1,14 @@
 import { Router } from "express";
 
-import {getAllorders,getById,update,deleteById,add} from "../controllers/order.js"
+import { getAllorders, getById, update, deleteById, add } from "../controllers/order.js"
 
-const router=Router();
-router.get("/",getAllorders);
-router.get("/id",getById);
-router.delete("/:id",deleteById);
+const router = Router();
+router.get("/", getAllorders);
+router.get("/id", getById);
+router.delete("/:id", deleteById);
 
-router.put("/:id",update);
+router.put("/:id", update);
 
-router.post("/",add);
+router.post("/", add);
 
 export default router;
