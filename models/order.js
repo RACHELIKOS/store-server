@@ -1,7 +1,7 @@
 
-import { Schema, model, Types } from "mongoose";
+import mongoose, { Schema, model, Types } from "mongoose";
 
-import { boolean, float } from "webidl-conversions";
+
 
 // הגדרת סכמת ההזמנה
 const orderSchema = Schema({
@@ -18,7 +18,7 @@ const orderSchema = Schema({
         qty: Number, // כמות
         price: Number // מחיר המוצר
     }],
-    isGetOff: Boolean, // האם יש הנחה
+    isGetOff: mongoose.SchemaTypes.Boolean, // האם יש הנחה
     price: Number, // המחיר הכולל
     finalPrice: Number // המחיר הסופי אחרי הנחה
 });
