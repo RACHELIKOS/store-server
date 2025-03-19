@@ -16,7 +16,8 @@ const orderSchema = Schema({
         productId: { type: Types.ObjectId, ref: "product" }, // קישור למודל "product"
         name: String, // שם המוצר
         qty: Number, // כמות
-        price: Number // מחיר המוצר
+        price: Number ,// מחיר המוצר
+        size:String
     }],
     isGetOff: mongoose.SchemaTypes.Boolean, // האם יש הנחה
     price: Number, // המחיר הכולל

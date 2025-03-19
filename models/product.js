@@ -1,6 +1,5 @@
 import { Schema, model } from "mongoose";
-// import { stringify } from "qs";
-// import { float } from "webidl-conversions";
+
 
 const prodctSchema = Schema({
     name: String,
@@ -9,7 +8,12 @@ const prodctSchema = Schema({
     img: String,
     price: Number,
     qty: Number,
-    details: [String]
+    details: [String],
+    size: String,
+    category: String,
+    gender: String,
+    type:String
 })
 
 export const prodctModel = model("product", prodctSchema)
+

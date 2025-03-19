@@ -97,3 +97,14 @@ export const add = async (req, res) => {
     })
   }
 }
+export const getBorrowsByUserId = async (req, res) => {
+    let { userid } = req.params;
+    try {
+        let result = await borrowModel.find({ userId: userid }).populate("userId");
+        res.json(result);
+    }
+    catch (err) {
+        res.status(400).json({ title: "cannot get all by user id", message: err.message })
+    }
+
+}
